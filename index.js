@@ -6,8 +6,7 @@ import { createRoot } from 'react-dom/client';
 
 const rootElement = document.getElementById('root');
 
-// Use createRoot from "react-dom/client" to render your app
-const root = createRoot(rootElement); // Use createRoot here
+const root = createRoot(rootElement);
 
 root.render(
   <React.StrictMode>
