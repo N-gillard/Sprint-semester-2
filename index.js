@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { BrowserRouter as Router } from 'react-router-dom'; // Import BrowserRouter if needed
-import { createRoot } from 'react-dom/client'; // Import createRoot from react-dom/client
+import { BrowserRouter as Router } from 'react-router-dom';
+import { createRoot } from 'react-dom/client';
 
 const rootElement = document.getElementById('root');
 
