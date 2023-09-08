@@ -3,7 +3,6 @@ import { render, waitFor } from '@testing-library/react';
 import { MemoryRouter, Route } from 'react-router-dom';
 import ProductDetails from '../ProductDetails';
 
-// Mocking getProductById directly within the mock
 jest.mock('../api', () => ({
   __esModule: true,
   getProductById: jest.fn(() =>
@@ -35,7 +34,6 @@ describe('ProductDetails', () => {
   });
 
   it('handles product fetching error', async () => {
-    // Mocking getProductById to simulate an error
     jest.spyOn(require('../api'), 'getProductById').mockRejectedValue(new Error('API error'));
 
     const { getByText } = render(
@@ -52,7 +50,6 @@ describe('ProductDetails', () => {
   });
 
   it('displays loading message while fetching product details', async () => {
-    // Mocking getProductById to have a slight delay
     jest.spyOn(require('../api'), 'getProductById').mockImplementation(() =>
       new Promise(resolve =>
         setTimeout(() =>
